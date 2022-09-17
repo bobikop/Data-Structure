@@ -33,13 +33,13 @@ public class Student {
         Student student = (Student) o;
 
         if (id != student.id) return false;
-        return Objects.equals(name, student.name);
+        return name.equals(student.name);
     }
 
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + name.hashCode();
         return result;
     }
 

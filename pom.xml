@@ -12,6 +12,7 @@
         <module>m2-Arrays</module>
         <module>m3-CollectionsReview</module>
         <module>m4-LinkedList</module>
+        <module>m5-StacksAndRecursion</module>
 
     </modules>
 
