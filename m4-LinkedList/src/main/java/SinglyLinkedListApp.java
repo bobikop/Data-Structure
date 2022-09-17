@@ -2,15 +2,23 @@ import java.util.ArrayList;
 
 public class SinglyLinkedListApp {
     public static void main(String[] args) {
-        MySinglyLinkedList mylist=new MySinglyLinkedList();
-        System.out.println(mylist.isEmpty());
+        MySinglyLinkedList myList =new MySinglyLinkedList();
+        System.out.println(myList.isEmpty());
 
         for (int i = 0; i < 10; i++) {
-            mylist.add(i);
+            myList.add(i);
         }
-        mylist.printNodes();
-        mylist.deleteById(9);
-        mylist.printNodes();
-        System.out.println("index of 3 :"+ mylist.indexOf(3));
+        myList.printNodes();
+        myList.deleteById(9);
+        myList.printNodes();
+        System.out.println("index of 3 :"+ myList.indexOf(3));
+        System.out.println("----------------------------------------------------");
+
+
+        myList.addFirst(99);
+        myList.printNodes();
+        myList.findKthFromLast(5);
+
+
     }
 }
