@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package ReverseLinkedList;
 
 public class MySinglyLinkedList {
     Node head;
@@ -9,8 +9,69 @@ public class MySinglyLinkedList {
         return head == null;
     }
 
-    //--------------------------------------------------------------------------//
+  void addFirst(int data){
+      // create a new node object from data
+      Node node=new Node(data);
+     // case 1: list empty
+      if(isEmpty()){
+       head=tail=node;
+      } else{// case 2 : list is not empty
+          node.next=head;
+          head=node;
+      }
+      //increase size
+      size++;
+  }
+  public int getKthItemFromLast(int k){
+        // create two pointers
+        Node ptr1=head;
+        Node ptr2=head;
+        // move ptr2 k-1 times
 
+      for (int i = 0; i < k-1; i++) {
+          ptr2=ptr2.next;
+      }
+      // move both pointers until ptr2 hits the last element
+      while(ptr2.next!=null){
+          ptr1=ptr1.next;
+          ptr2=ptr2.next;
+      }
+      // ptr1 is on the kth element from the last
+      return ptr1.id;
+  }
+    public void removeKthItemFromLast(int k){
+        // create three pointers
+        Node ptr1=head;
+        Node ptr2=head;
+        Node prev=null;
+        // move ptr2 k-1 times
+
+        for (int i = 0; i < k-1; i++) {
+            ptr2=ptr2.next;
+        }
+        // move both pointers until ptr2 hits the last element
+        while(ptr2.next!=null){
+            prev=ptr1;
+            ptr1=ptr1.next;
+            ptr2=ptr2.next;
+        }
+        // ptr1 is on the kth element from the last
+       // Do delete operation
+        if (ptr1==head){
+            head=ptr1.next;
+            ptr1.next=null;
+            size--;
+        }else if(ptr1==tail){
+            tail=prev;
+            prev.next=null;
+            size--;
+        } else {
+            prev.next=ptr1.next;
+            ptr1.next=null;
+            size--;
+
+        }
+    }
     void add(int data) {
         // create a new node object from data
         Node node = new Node(data);
@@ -25,24 +86,6 @@ public class MySinglyLinkedList {
         }
 
     }
-
-    //--------------------------------------------------------------------------//
-
-    void addFirst(int data){
-        Node node1 = new Node(data);
-
-        if(isEmpty()){
-            head = tail = node1;
-            size++;
-        }else{
-            node1.next = head;
-            head = node1;
-            size++;
-        }
-    }
-
-    //--------------------------------------------------------------------------//
-
     void deleteById(int id){
         // check if empty
         if(isEmpty()) System.out.println("List is empty!!!");
@@ -77,8 +120,6 @@ public class MySinglyLinkedList {
         }
 
     }
-
-    //--------------------------------------------------------------------------//
     int indexOf(int id){
         if (isEmpty()) return -1;
         int pos=0;
@@ -91,8 +132,6 @@ public class MySinglyLinkedList {
         }
         return -1;
     }
-
-    //--------------------------------------------------------------------------//
     void printNodes(){
         Node current=head;
         while(current!=null){
@@ -104,69 +143,6 @@ public class MySinglyLinkedList {
         }
   }
 
-    //--------------------------------------------------------------------------//
-
-
-    void findKthFromLast(int K){
-
-        int length = 0; // here we initialize the length of the Linked list
-        Node temporary = head; // temporary note to track
-
-        // 1) count the number of nodes in Linked List
-        while(temporary != null){
-            temporary = temporary.next;
-            length++; // number of nodes
-        }
-        // check if value of K is not more than length of the linked list
-
-        if(length < K) return;
-        temporary = head;
-
-        // 2) get the (len-N+1)th node from the beginning
-
-        for (int i = 1; i < length - K + 1; i++)
-            temporary = temporary.next;
-
-        System.out.println(temporary.id);
-    }
-
-
-    void removeKthFromLast(int K){
-        // create three pointers
-       Node ptr1 = head;
-       Node ptr2 = head;
-       Node prev = null;
-// move ptr2 k-1 times
-        for (int i = 0; i < K-1 ; i++) {
-            ptr2 = ptr2.next;
-        }
-        // move both pointers until ptr2 hits the last element
-            while(ptr2.next!=null){
-                prev=ptr1;
-                ptr1=ptr1.next;
-                ptr2=ptr2.next;
-
-            }
-        // ptr1 is on the kth element from the last
-        // Do delete operation
-            if (ptr1==head){
-                head=ptr1.next;
-                ptr1.next = null;
-                size--;
-
-            }else if(ptr1 == tail){
-                      tail=prev;
-                      prev.next=null;
-                      size--;
-                }else{
-
-                prev.next=ptr1.next;
-                ptr1.next=null;
-                        size--;
-
-            }
-
-        }
 
     public void removeKthFromLast2(int k){
         Node ptr1=head;
@@ -197,4 +173,5 @@ public class MySinglyLinkedList {
 
     }
 
-    }
+
+}

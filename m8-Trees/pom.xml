@@ -4,20 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.cydeo</groupId>
-    <artifactId>Data_Structure</artifactId>
-    <packaging>pom</packaging>
+    <groupId>org.example</groupId>
+    <artifactId>m8-Trees</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>m2-Arrays</module>
-        <module>m3-CollectionsReview</module>
-        <module>m4-LinkedList</module>
-        <module>m5-StacksAndRecursion</module>
-        <module>m6-AlgorithmProblems</module>
-        <module>m7-Queues</module>
-        <module>m8-Trees</module>
-
-    </modules>
 
     <properties>
         <maven.compiler.source>18</maven.compiler.source>

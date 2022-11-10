@@ -19,6 +19,9 @@ public class SinglyLinkedListApp {
         myList.printNodes();
         myList.findKthFromLast(5);
 
+        myList.removeKthFromLast(2);
+        myList.removeKthFromLast2(2);
+
 
     }
 }
