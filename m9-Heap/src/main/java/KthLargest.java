@@ -11,11 +11,12 @@ public class KthLargest {
         // create a heap
         MyHeap heap = new MyHeap(array.length);
         for (int i = 0; i < array.length; i++) {
-            heap.insert(array[i]);
+            heap.insert(array[i]); // insert array elements to the heap
         }
-        for (int i = 0; i < k-1; i++) {
+        for (int i = 0; i < k-1; i++) {  // k-1 times removal
             heap.peak();
         }
         return heap.peak();
     }
+
 }

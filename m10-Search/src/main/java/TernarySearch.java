@@ -16,7 +16,7 @@ public class TernarySearch {
                 right = middle2 - 1;
             }
         }
-        return -1;
+        return - 1;
     } // end ternary
 
     public static int ternarySearchRecursive(int[] array, int data, int left, int right){
@@ -26,8 +26,8 @@ public class TernarySearch {
         int middle2 = right - partition;
         if (array[middle1] == data) return middle1;
         if (array[middle2] == data) return middle2;
-        if (data<array[middle1]) return ternarySearchRecursive(array,data, left, middle1-1);
-        if(data>array[middle2]) return ternarySearchRecursive(array, data, middle2+1, right);
+        if (data < array[middle1]) return ternarySearchRecursive(array,data, left, middle1-1);
+        if(data >array[middle2]) return ternarySearchRecursive(array, data, middle2+1, right);
         else return ternarySearchRecursive(array, data, middle1+1, middle2-1);
 
 
