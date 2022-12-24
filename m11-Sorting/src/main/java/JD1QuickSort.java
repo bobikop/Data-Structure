@@ -2,16 +2,16 @@
 
 public class JD1QuickSort {
     public static void qSort(int[] array, int start, int end){
-       if (start>=end) return; //termination
-       int boundary=partition(array, start, end);
+       if (start >= end) return; //termination
+       int boundary = partition(array, start, end);
        qSort(array, start, boundary-1);// call qSort for left part
        qSort(array,boundary+1, end);// call qSort for right part
 
     }
 
     public static int partition(int[] array, int start, int end){
-        int pivot=array[end];
-        int boundary=start;
+        int pivot = array[end];
+        int boundary = start;
         for (int i = start; i <=end ; i++) {
             if(array[i]<=pivot) swap(array, i, boundary++);
         }
