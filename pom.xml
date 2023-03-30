@@ -20,6 +20,7 @@
         <module>m10-Search</module>
         <module>m11-Sorting</module>
         <module>m12-AlgorithmQuestions</module>
+        <module>m13-Triee</module>
 
     </modules>
 
