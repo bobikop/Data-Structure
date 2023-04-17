@@ -24,7 +24,7 @@ public class Graph {
 
             }
             System.out.println();
-            fromVertex++;
+            fromVertex++; // increase the vertex number
         }
     }
 }
