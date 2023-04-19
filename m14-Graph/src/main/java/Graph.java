@@ -11,6 +11,8 @@ public class Graph {
             adjList.add(i,new ArrayList<>());
         }
         // Add vertices connected to current vertex
+
+
         for (Edge edge : edges) {
             adjList.get(edge.from).add(new Vertex(edge.to,edge.weight));
         }

@@ -8,5 +8,6 @@ public class GraphMainApp {
         ,new Edge(5, 4, 3), new Edge(1, 2, 4));
         Graph graph=new Graph(edges);
         graph.printGraph(graph);
+
     }
 }
