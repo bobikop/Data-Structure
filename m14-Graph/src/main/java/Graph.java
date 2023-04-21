@@ -17,6 +17,8 @@ public class Graph {
             adjList.get(edge.from).add(new Vertex(edge.to,edge.weight));
         }
     }
+
+
     public static void printGraph(Graph graph){
         int fromVertex=0;
         System.out.println("Printing the relationships on the graph.....");
