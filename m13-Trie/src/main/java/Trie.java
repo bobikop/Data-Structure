@@ -5,7 +5,6 @@ public class Trie {
     public Trie() {
         root= new TrieNode();
     }
-
    // Insert a new word into trie
     public void insert(String word) {
         TrieNode curNode=root;
