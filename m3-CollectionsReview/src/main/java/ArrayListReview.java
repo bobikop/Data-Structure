@@ -10,7 +10,6 @@ public class ArrayListReview {
         students.add(new Student(2,"Julia"));
         students.add(new Student(3,"Mike"));
         students.add(new Student(4,"Mary"));
-
         // Iteration on ArrayLists
         // 1. For Loop with get(index)
 
