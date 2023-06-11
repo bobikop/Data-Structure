@@ -15,7 +15,6 @@ public class SetReview {
         set.add(new Student(3,"Mike"));
         set.add(new Student(4,"Mary"));
 
-
         System.out.println(set);
         //String st= "Javva Developer";
 
