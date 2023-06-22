@@ -5,7 +5,6 @@ public class StackApp {
         for (int i = 0; i < 5; i++) {
             stack.push(i);
         }
-
         stack.push(10);
 
         for (int i = 0; i <5 ; i++) {
