@@ -12,6 +12,5 @@ public class CollectionStack {
         System.out.println("peek is: "+ cStack.peek());
 //        Stack<Integer> s = new Stack<>(); // Deque interface is more effective so recommendation is to use always Deque over Stack
 
-
     }
 }
