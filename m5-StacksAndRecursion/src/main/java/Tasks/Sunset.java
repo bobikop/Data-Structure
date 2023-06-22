@@ -34,3 +34,17 @@ public class Sunset {
         System.out.println(countBuildings(arr, arr.length));
     }
 }
+
+/*
+*
+* • Main stack operations
+- void push(int data): Inserts data onto stack.
+- int pop(): Removes and returns the last inserted element from the stack.
+
+• Auxiliary stack operations
+- Top(): Returns the last inserted element without removing it. (Peek())
+- int Size(): Returns the number of elements stored in the stack.
+- int IsEmpty(): Indicates any elements are stored in the stack or not.
+- int IsFull(): Indicates the stack is full or not.
+
+• Can be implemented using Arrays or Linked Lists (stack is an Abstract Data Type-ADT)*/
