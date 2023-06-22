@@ -2,7 +2,6 @@ public class ExpBalanceCheck {
     public static void main(String[] args) {
 
     }
-
     public  static boolean balanceCheck(String expr){
         // create a stack
         MyStack<Character> myStack = new MyStack<>();
