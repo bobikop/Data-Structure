@@ -31,7 +31,7 @@ public class SunsetViews {
             i+=step;
 
         }
-         // now I have a stack with the building index that can see the sun
+         // now I have a stack with the building index that can see the sun .
         if(direction.equalsIgnoreCase("west")) Collections.reverse(stack);
         return new ArrayList<Integer>(stack);
     }
